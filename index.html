@@ -63,6 +63,10 @@
         setInterval(refreshTable, 1000);
     });
     
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(refreshChart);
+
+    
     function refreshTable(){
         
         // var trHTML = '';	    
