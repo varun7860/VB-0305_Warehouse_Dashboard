@@ -68,10 +68,11 @@
     
         // Fetch every 1 second
         setInterval(refreshTable, 1000);
-        google.charts.load("current", {packages:['corechart']});
-        google.charts.setOnLoadCallback(refreshChart);
+        setInterval(refreshMap, 5000);
     });
     
+      google.charts.load("current", {packages:['corechart']});
+      google.charts.setOnLoadCallback(refreshChart);
 
     
     function refreshTable(){
