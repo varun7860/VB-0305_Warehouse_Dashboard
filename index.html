@@ -160,7 +160,7 @@
       for (var i = 0; i < data.feed.entry.length; ++i) {
         var json_data = {
           "OderID" : data.feed.entry[i].gsx$orderid.$t,
-          "TimeTaken": (data.feed.entry[i].gsx$timetaken.$t),
+          "TimeTaken": parseInt(data.feed.entry[i].gsx$timetaken.$t),
           "Priority": data.feed.entry[i].gsx$priority.$t
           };
           jsonDataObject.push(json_data);
