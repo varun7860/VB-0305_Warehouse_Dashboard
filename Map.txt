@@ -51,7 +51,7 @@
         var map = L.map('map').setView([20.5937, 78.9629], 4);
         var jsonDataObject =[];
 
-        $.getJSON('YOUR JSON ENDPOINT', function(data) {
+        $.getJSON('https://spreadsheets.google.com/feeds/list/16bFnUaL0PxL9_xnqpTcsgDhIvn0ozzf2xz9THGAYBDQ/5/public/full?alt=json', function(data) {
         for (var i = 0; i < data.feed.entry.length; ++i) {
 
             var json_data = {
