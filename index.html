@@ -132,6 +132,9 @@
                 "City": data.feed.entry[i].gsx$city.$t,
                 "OderID" : data.feed.entry[i].gsx$orderid.$t,
                 "Item" : data.feed.entry[i].gsx$item.$t,
+                "Priority" : data.feed.entry[i].gsx$priority.$t,
+                "Dispatch" : data.feed.entry[i].gsx$dispatched.$t,
+                "Shipped": data.feed.entry[i].gsx$shipped.$t,
                 "Latitude": parseFloat(data.feed.entry[i].gsx$latitude.$t),
                 "Longitude": parseFloat(data.feed.entry[i].gsx$longitude.$t)
             };
@@ -151,7 +154,8 @@
                         var marker = e.target;
                         popup = L.popup()
                         .setLatLng(marker.getLatLng())
-                        .setContent("Order ID: " + marker.myJsonData.OderID + " || Item: " +   marker.myJsonData.Item)
+                        .setContent("Order ID: " + marker.myJsonData.OderID + " || Item: " +   marker.myJsonData.Item + "||Dispatched: " + 
+                                    marker.myjsonData.Dispatch + "|| Shipped: " + marker.myJsonData.Shipped)
                         .openOn(map);
                     }
 
