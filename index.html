@@ -75,7 +75,7 @@
     
         // Fetch every 1 second
         setInterval(refreshTable, 1000);
-        setInterval(refreshMap, 5000);
+        setInterval(refreshMap, 2000);
     });
     
       google.charts.load("current", {packages:['corechart']});
@@ -101,6 +101,8 @@
                               '</td><td>' + data.feed.entry[i].gsx$shipped.$t +
                               '</td><td>' + data.feed.entry[i].gsx$orderdateandtime.$t +
                               '</td><td>' + data.feed.entry[i].gsx$dispatchdateandtime.$t +
+                              '</td><td>' + data.feed.entry[i].gsx$shippeddateandtime.$t +
+                              '</td><td>' + data.feed.entry[i].gsx$timetaken.$t +
                         	  '</td></tr>';
 
                 }
