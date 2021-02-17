@@ -126,18 +126,11 @@
         for (var i = 0; i < data.feed.entry.length; ++i) {
 
             var json_data = {
-                "OrderID" : data.feed.entry[i].gsx$orderid.$t,
-                "Item" : data.feed.entry[i].gsx$item.$t,
-                "Priority": data.feed.entry[i].gsx$priority.$t,
                 "City": data.feed.entry[i].gsx$city.$t,
+                "OderID" : data.feed.entry[i].gsx$orderid.$t,
+                "Item" : data.feed.entry[i].gsx$item.$t,
                 "Latitude": parseFloat(data.feed.entry[i].gsx$latitude.$t),
-                "Longitude": parseFloat(data.feed.entry[i].gsx$longitude.$t),
-                "Dispatched" : data.feed.entry[i].gsx$dispatched.$t,
-                "Shipped": data.feed.entry[i].gsx$shipped.$t,
-                "Order Date and Time": data.feed.entry[i].gsx$orderdate.$t,
-                "Dispatch Date and Time": data.feed.entry[i].gsx$dispatchdate.$t,
-                "Shipping Date and Time": data.feed.entry[i].gsx$shippingdate.$t,
-                "Time Taken": data.feed.entry[i].gsx$timetaken.$t
+                "Longitude": parseFloat(data.feed.entry[i].gsx$longitude.$t)
             };
             jsonDataObject.push(json_data);
                 
