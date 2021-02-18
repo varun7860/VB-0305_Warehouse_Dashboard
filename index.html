@@ -205,9 +205,27 @@
                         var marker = e.target;
                         popup = L.popup()
                         .setLatLng(marker.getLatLng())
+                    
+                        if(marker.myJsonData.Dispatch == "Yes" && marker.myJsonData.Shipped == "Yes")
+                        {
                         .setContent("<p> Order ID: " + marker.myJsonData.OderID + " || Item: " + marker.myJsonData.Item + '<br />'
                                     + "|| Dispatch Status: " + marker.myJsonData.Dispatch + "|| Shipped Status: " + marker.myJsonData.Shipped + '<br />'
                                     + '</p>')
+                        }
+                    
+                        if(marker.myJsonData.Dispatch != "Yes" && marker.myJsonData.Shipped != "Yes")
+                        {
+                        .setContent("<p> Order ID: " + marker.myJsonData.OderID + " || Item: " + marker.myJsonData.Item + '<br />'
+                                    + "|| Dispatch Status: " + "No" + "|| Shipped Status: " + "No" + '<br />'
+                                    + '</p>')
+                        }
+                    
+                        if(marker.myJsonData.Dispatch == "Yes" && marker.myJsonData.Shipped != "Yes")
+                        {
+                        .setContent("<p> Order ID: " + marker.myJsonData.OderID + " || Item: " + marker.myJsonData.Item + '<br />'
+                                    + "|| Dispatch Status: " + marker.myJsonData.Dispatch + "|| Shipped Status: " + "No" + '<br />'
+                                    + '</p>')
+                        }
                         .openOn(map);
                     }
 
