@@ -175,27 +175,21 @@
                 if(jsonDataObject[j].Dispatch != "Yes" && jsonDataObject[j].Shipped != "Yes")
                 {
                      var marker = L.marker(L.latLng(parseFloat(jsonDataObject[j].Latitude), parseFloat(jsonDataObject[j].Longitude)), {icon: redmarker});
-                     marker.bindPopup(jsonDataObject[j].City, {
-                           autoClose: false
-                      });
                 }
                       
                 if(jsonDataObject[j].Dispatch == "Yes" && jsonDataObject[j].Shipped == "Yes")
                 {
                     var marker = L.marker(L.latLng(parseFloat(jsonDataObject[j].Latitude), parseFloat(jsonDataObject[j].Longitude)), {icon: greenmarker});
-                    marker.bindPopup(jsonDataObject[j].City, {
-                           autoClose: false
-                      }); 
                 }
             
                 if(jsonDataObject[j].Dispatch == "Yes" && jsonDataObject[j].Shipped != "Yes")
                 {
                     var marker = L.marker(L.latLng(parseFloat(jsonDataObject[j].Latitude), parseFloat(jsonDataObject[j].Longitude)), {icon: yellowmarker});
-                     marker.bindPopup(jsonDataObject[j].City, {
+                }
+                
+                marker.bindPopup(jsonDataObject[j].City, {
                            autoClose: false
                       }); 
-                }
-                     
                 map.addLayer(marker);
                 marker.on('click', onClick_Marker)
                 // Attach the corresponding JSON data to your marker:
