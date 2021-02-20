@@ -197,7 +197,7 @@
         
                 function onClick_Marker(e) {
                         var marker = e.target;
-                        if (marker.JsonData.Dispatch == "Yes" && marker.JsonData.Shipped == "Yes")
+                        if (marker.myJsonData.Dispatch == "Yes" && marker.myJsonData.Shipped == "Yes")
                         {
                            popup = L.popup()
                           .setLatLng(marker.getLatLng())   
@@ -207,7 +207,7 @@
                           .openOn(map);
                         }
                     
-                        if (marker.JsonData.Dispatch == "Yes" && marker.JsonData.Shipped != "Yes")
+                        if (marker.myJsonData.Dispatch == "Yes" && marker.myJsonData.Shipped != "Yes")
                          {
                            popup = L.popup()
                           .setLatLng(marker.getLatLng())   
@@ -216,7 +216,7 @@
                           .openOn(map);
                          }
                     
-                        if (marker.JsonData.Dispatch != "Yes" && marker.JsonData.Shipped != "Yes")
+                        if (marker.myJsonData.Dispatch != "Yes" && marker.myJsonData.Shipped != "Yes")
                          {
                            popup = L.popup()
                           .setLatLng(marker.getLatLng())   
