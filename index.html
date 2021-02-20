@@ -199,7 +199,7 @@
                         var marker = e.target;
                         popup = L.popup()
                         .setLatLng(marker.getLatLng())   
-                        .setContent("<p> Order ID: " + marker.myJsonData.OderID + '<br />' + " Item: " + marker.myJsonData.Item + '<br />' 
+                        .setContent("<p> Order ID: " + marker.myJsonData.OderID + '<br />' + "City: " + marker.myJsonData.City + '<br />' + " Item: " + marker.myJsonData.Item + '<br />' 
                                      + "Dispatch Status: " + marker.myJsonData.Dispatch + '<br />' + "Shipped Status: " + marker.myJsonData.Shipped + '<br />'
                                      + '</p>')
                         .openOn(map);
