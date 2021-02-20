@@ -204,6 +204,7 @@
                           .setContent("<p> Order ID: " + marker.myJsonData.OderID + '<br />' + "City: " + marker.myJsonData.City + '<br />' + " Item: " + marker.myJsonData.Item + '<br />' 
                                        + "Dispatch Status: " + marker.myJsonData.Dispatch + '<br />' + "Shipped Status: " + marker.myJsonData.Shipped + '<br />'
                                        + '</p>')
+                          .openOn(map);
                         }
                     
                         if (marker.JsonData.Dispatch == "Yes" && marker.JsonData.Shipped != "Yes")
@@ -212,6 +213,7 @@
                           .setLatLng(marker.getLatLng())   
                           .setContent("<p> Order ID: " + marker.myJsonData.OderID + '<br />' + "City: " + marker.myJsonData.City + '<br />' + " Item: " + marker.myJsonData.Item + '<br />' 
                                        + "Dispatch Status: " + marker.myJsonData.Dispatch + '<br />' + "Shipped Status: No" + '<br />' + '</p>')
+                          .openOn(map);
                          }
                     
                         if (marker.JsonData.Dispatch != "Yes" && marker.JsonData.Shipped != "Yes")
@@ -220,9 +222,8 @@
                           .setLatLng(marker.getLatLng())   
                           .setContent("<p> Order ID: " + marker.myJsonData.OderID + '<br />' + "City: " + marker.myJsonData.City + '<br />' + " Item: " + marker.myJsonData.Item + '<br />' 
                                        + "Dispatch Status: No" + '<br />' + "Shipped Status: No" + '<br />' + '</p>')
+                          .openOn(map);
                          }
-                    
-                       .openOn(map);
                     }
 
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
